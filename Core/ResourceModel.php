@@ -55,10 +55,6 @@ class ResourceModel implements ResourceInterface
 
     public function delete($model)
     {
-        var_dump($model);
-        die();
-    
-
         $sql = "DELETE FROM $this->table WHERE id = ".$model;
         $req = Database::getBdd()->prepare($sql);
         return $req->execute();
